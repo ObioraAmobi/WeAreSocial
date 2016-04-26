@@ -28,6 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 SITE_ID = 2
 
+EMAIL_USE_TLS = True
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -54,6 +60,7 @@ INSTALLED_APPS = [
     'threads',
     'polls',
     'rest_framework',
+    'contact',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'

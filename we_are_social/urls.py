@@ -24,6 +24,7 @@ from accounts.views import register, profile, login, logout, cancel_subscription
 from threads import views as forum_views
 from polls import api_views
 from django.contrib.staticfiles import views as staticfiles_views
+from contact import views as contact_views
 
 
 urlpatterns = [
@@ -67,4 +68,7 @@ urlpatterns = [
 
     #Staticfiles for Heroku deployment
     url(r'^static/(?P<path>.*)$', staticfiles_views.serve),
+
+    #Contact
+    url(r'^contact/', contact_views.contact, name='contact'),
 ]
